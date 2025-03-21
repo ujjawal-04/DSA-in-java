@@ -1,3 +1,4 @@
+package Queue;
 //max priority queue
 public class MaxPQ {
     private Integer[] heap;

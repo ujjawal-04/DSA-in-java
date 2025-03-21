@@ -1,3 +1,4 @@
+package array;
 public class mergeSortedArrays {
     
     public static void printArray(int[] arr) {

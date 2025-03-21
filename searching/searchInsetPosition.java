@@ -1,3 +1,4 @@
+package searching;
 public class searchInsetPosition {
 
         public int searchInsetPositionsearch(int[] nums,int target) {

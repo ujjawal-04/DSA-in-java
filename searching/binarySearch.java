@@ -1,3 +1,4 @@
+package searching;
 public class binarySearch {
 
     public int search(int[] nums,int key) {

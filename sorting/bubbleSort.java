@@ -1,3 +1,4 @@
+package sorting;
 public class bubbleSort {
 
     public static void printArray(int[] arr) {

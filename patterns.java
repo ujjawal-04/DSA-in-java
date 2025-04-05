@@ -224,16 +224,78 @@ public void print18(int n) {
 }
 
 public void print19(int n) {
+    int iniS = 0;
     for(int i=0;i<n;i++) {
-        for(char ch=(char)('E'-i);ch<='E';ch++) {
-             System.out.print(ch);
+        for(int j=1 ;j<=n-i;j++) {
+            System.out.print("*");
         }
+        for(int j=0;j<=iniS;j++) {
+            System.out.print(" ");
+        }
+        for(int j=1 ;j<=n-i;j++) {
+            System.out.print("*");
+        }
+        System.out.println();
+        iniS+=2;
+    }
+    iniS=8;
+    for(int i=1;i<=n;i++) {
+        for(int j=1 ;j<=i;j++) {
+            System.out.print("*");
+        }
+        for(int j=0;j<=iniS;j++) {
+            System.out.print(" ");
+        }
+        for(int j=1 ;j<=i;j++) {
+            System.out.print("*");
+        }
+        iniS-=2;
         System.out.println();
     }
 }
 
+public void print20(int n) {
+    int spaces = 2 * n - 2;
+    for (int i = 1; i <= 2 * n - 1; i++) {
+        int stars = i;
+        if (i > n) stars = 2 * n - i;
+        for (int j = 1; j <= stars; j++) {
+            System.out.print("*");
+        }
+        for (int j = 1; j <= spaces; j++) {
+            System.out.print(" ");
+        }
+        for (int j = 1; j <= stars; j++) {
+            System.out.print("*");
+        }
+        System.out.println(); 
+        if (i < n) spaces -= 2;
+        else spaces += 2;
+    }
+}
 
+public void print21(int n) {
+    for(int i=0;i<n;i++) {
+        for(int j=0;j<n;j++) {
+            if(i==0 || j==0 || i==n-1||j==n-1) {
+                System.out.print("*");
+            }
+            else System.out.print(" ");
+        }	
+        System.out.println();
+}
+}
 
+public void print22(int n) {
+    int size = 2 * n - 1;
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            int min = Math.min(Math.min(i, j), Math.min(size - 1 - i, size - 1 - j));
+            System.out.print((n - min) + " ");
+        }
+        System.out.println();
+    }
+}
 
 public static void main(String[] args) {
     patterns p = new patterns();
@@ -256,5 +318,8 @@ public static void main(String[] args) {
     p.print17(5);
     p.print18(5);
     p.print19(5);
+    p.print20(5);
+    p.print21(5);
+    p.print22(5);
 }
 }
